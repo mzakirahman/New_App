@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SearchVoiw extends StatelessWidget {
+class FavoriteView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("SearchVoiw"),
+        child: Text("FavoriteView"),
       )
     );
   }
