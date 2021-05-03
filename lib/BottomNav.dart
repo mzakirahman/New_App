@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:news_app/views/home_view.dart';
+import 'package:news_app/views/search_view.dart';
+import 'package:news_app/views/favorite_view.dart';
+import 'package:news_app/views/account_view.dart';
+
+
 
 class BottomNav extends StatefulWidget {
   @override
@@ -15,11 +21,11 @@ class _BottomNavState extends State<BottomNav> {
     });
   }
 
-static List<Widget> _bottomNavViuw = [
-  Home(),
-  Search(),
-  Favorite(),
-  Account(),
+static List<Widget> _bottomNavView = [
+  HomeView(),
+  SearchView(),
+  FavoriteView(),
+  AccountView(),
 ];
 
   @override
@@ -27,7 +33,7 @@ static List<Widget> _bottomNavViuw = [
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: _bottomN,
+        child: _bottomNavView.elementAt(_selectedIndex), 
         ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
